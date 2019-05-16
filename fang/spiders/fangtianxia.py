@@ -7,7 +7,7 @@ class FangtianxiaSpider(RedisSpider):
     name = 'fang'
     allowed_domains = ['fang.com']
     # start_urls = ['http://www.fang.com/SoufunFamily.htm']
-    #同时也是数据库名字
+
     redis_key = "fangtianxai:start_urls"
 
     def parse(self, response):

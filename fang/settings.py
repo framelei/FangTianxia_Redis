@@ -16,7 +16,7 @@ DEFAULT_REQUEST_HEADERS = {
 }
 
 ITEM_PIPELINES = {
-   'fang.pipelines.FangPipeline': 300,
+   # 'fang.pipelines.FangPipeline': 300,
    'fang.pipelines.MongoPipeline': 400,
 }
 
@@ -37,7 +37,8 @@ SCHEDULER_PERSIST = True
 # 设置连接redis信息，mast主机ip，此处为战神k650D本机ip
 REDIS_HOST = '192.168.43.68'
 REDIS_PORT = 6379
+#如果redis数据库有密码，使用如下方法：
+# REDIS_URL = 'redis://username:password@192.168.43.68:6379'
 
-
-MONGO_URI = '192.168.43.68'
+MONGO_URI = '127.0.0.1'
 MONGO_DB = 'fangtianxia'
