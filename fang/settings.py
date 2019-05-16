@@ -19,8 +19,13 @@ DEFAULT_REQUEST_HEADERS = {
 
 ITEM_PIPELINES = {
    'fang.pipelines.FangPipeline': 300,
-    'fang.pipelines.MongoPipeline': 400,
+   'fang.pipelines.MongoPipeline': 400,
 }
+
+DOWNLOADER_MIDDLEWARES = {
+    'fang.middlewares.my_useragent': 300,
+}
+
 
 # 1、确保request存储到redis中
 SCHEDULER = "scrapy_redis.scheduler.Scheduler"
