@@ -42,3 +42,6 @@ REDIS_PORT = 6379
 
 MONGO_URI = '127.0.0.1'
 MONGO_DB = 'fangtianxia'
+#在CentOs下写入数据需要使用账号密码连接
+MONGO_USERNAME = 'root'
+MONGO_PASSWORD = '123456'
