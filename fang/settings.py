@@ -40,8 +40,10 @@ REDIS_PORT = 6379
 #如果redis数据库有密码，使用如下方法：
 # REDIS_URL = 'redis://username:password@192.168.43.68:6379'
 
-MONGO_URI = '127.0.0.1'
+MONGO_URI = '192.168.43.68'
 MONGO_DB = 'fangtianxia'
 #在CentOs下写入数据需要使用账号密码连接
 MONGO_USERNAME = 'root'
 MONGO_PASSWORD = '123456'
+
+# MONGO_URL = 'mongodb://root:123456@192.168.43.68:27017'
