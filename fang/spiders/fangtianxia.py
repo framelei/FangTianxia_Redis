@@ -8,7 +8,7 @@ class FangtianxiaSpider(RedisSpider):
     allowed_domains = ['fang.com']
     # start_urls = ['http://www.fang.com/SoufunFamily.htm']
 
-    redis_key = "fangtianxai:start_urls"
+    redis_key = "fangtianxia:start_urls"
 
     def parse(self, response):
         trs = response.xpath('//div[@class="outCont"]//tr')
