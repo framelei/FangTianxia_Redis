@@ -102,7 +102,7 @@ class FangDownloaderMiddleware(object):
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
 
-class my_useragent(object):
+class UserAgent(object):
     def process_request(self,request,spider):
         # 在百度里搜索user_agent_list粘进来
         user_agent_list = [
