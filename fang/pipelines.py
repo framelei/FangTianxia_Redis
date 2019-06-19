@@ -18,35 +18,38 @@ class FangPipeline(object):
         self.esfhouse_fp.close()
 
 
-
 # 保存到mongodb
 class MongoPipeline(object):
-    def __init__(self,mongo_uri,mongo_db,mongo_user,mongo_pwd):
+    def __init__(self,mongo_uri,mongo_db,mongo_username,mongo_password):
         self.mongo_uri = mongo_uri
         self.mongo_db = mongo_db
-        self.mongo_user = mongo_user
-        self.mongo_pwd = mongo_pwd
+        self.mongo_username = mongo_username
+        self.mongo_password = mongo_password
 
     @classmethod
     def from_crawler(cls,crawler):
         return cls(
             mongo_uri = crawler.settings.get('MONGO_URI'),
             mongo_db = crawler.settings.get('MONGO_DB'),
-            mongo_user = crawler.settings.get('MONGO_USERNAME'),
-            mongo_pwd = crawler.settings.get('MONGO_PASSWORD')
+            mongo_username = crawler.settings.get('MONGO_USERNAME'),
+            mongo_password = crawler.settings.get('MONGO_PASSWORD'),
         )
 
+
     def open_spider(self,spider):
-        self.client = pymongo.MongoClient(self.mongo_uri,username=self.mongo_user,password=self.mongo_pwd)
+        self.client = pymongo.MongoClient(self.mongo_uri,username=self.mongo_username,password=self.mongo_password)
         self.db = self.client[self.mongo_db]
 
     def process_item(self,item,spider):
         name = item.collection
-        self.db[name].insert(dict(item))
+        # self.db[name].insert(dict(item))
+        #根据唯一url进行数据更新
+        self.db[name].update({'origin_url':item.get('origin_url')},{'$set':item},True)
         return item
 
     def close_spider(self,spider):
         self.client.close()
+
 
 
 # 保存到MySQL
@@ -76,6 +79,7 @@ class MysqlTwistedPipline(object):
         #使用twisted将mysql插入变成异步执行
         query = self.dbpool.runInteraction(self.do_insert, item)
         query.addErrback(self.handle_error, item, spider) #处理异常
+        return item
 
     def handle_error(self, failure, item, spider):
         # 处理异步插入的异常

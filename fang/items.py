@@ -2,7 +2,7 @@ import scrapy
 from scrapy import Field
 
 class NewHouseItem(scrapy.Item):
-    collection = 'NewHouseItem'
+    collection = 'newhouseitem'
     # 省份
     province = Field()
     # 城市
@@ -28,7 +28,7 @@ class NewHouseItem(scrapy.Item):
 
 
 class ESFHouseItem(scrapy.Item):
-    collection = 'ESFHouseItem'
+    collection = 'esfhouseitem'
     # 省份
     province = Field()
     # 城市
