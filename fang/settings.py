@@ -56,4 +56,4 @@ MYSQL_USER = 'root'
 MYSQL_PASSWORD = 'Sql_Lei'
 
 # D、代理url
-PROXY_URL = 'http://129.28.200.147:5556/random'
+PROXY_URL = 'http://129.28.200.147:5557/random'
