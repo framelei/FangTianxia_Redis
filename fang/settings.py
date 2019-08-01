@@ -8,7 +8,6 @@ ROBOTSTXT_OBEY = False
 
 DOWNLOAD_DELAY = 0.25
 
-
 DEFAULT_REQUEST_HEADERS = {
   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
   'Accept-Language': 'en',
@@ -57,3 +56,17 @@ MYSQL_PASSWORD = 'Sql_Lei'
 
 # D、代理url
 PROXY_URL = 'http://129.28.200.147:5557/random'
+
+# E、设置日志级别，保存信息
+LOG_LEVEL = "INFO"
+import datetime
+startDate = datetime.datetime.now().strftime('%Y%m%d')
+LOG_FILE=f"NewHouse{startDate}.txt"
+
+# F、设置最大等待时间、失败重试次数
+#默认响应时间是180s，长时间不释放会占用一个并发量影响效率
+DOWNLOAD_TIMEOUT = 10
+# 是否进行失败重试
+RETRY_ENABLED = True
+# 失败重试的次数，连续失败3次后会抛出TimeOut异常被errback捕获
+RETRY_TIMES = 3
