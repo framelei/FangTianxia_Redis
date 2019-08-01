@@ -47,7 +47,7 @@ class FangtianxiaSpider(RedisSpider):
                     esf_url = prefix + 'esf.fang.com/house/i31/'
                 # meta里面可以携带一些参数信息放到Request里面，在callback函数里面通过response获取
                 yield scrapy.Request(url=newhouse_url,callback=self.parse_newhouse,meta={'info':(province,city_name)})
-                yield scrapy.Request(url=esf_url,callback=self.parse_esf,meta={'info':(province,city_name)})
+                # yield scrapy.Request(url=esf_url,callback=self.parse_esf,meta={'info':(province,city_name)})
 
 
     def parse_newhouse(self,response):

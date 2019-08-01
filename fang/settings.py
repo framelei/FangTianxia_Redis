@@ -16,7 +16,7 @@ DEFAULT_REQUEST_HEADERS = {
 
 ITEM_PIPELINES = {
    # 'fang.pipelines.FangPipeline': 300,
-   'fang.pipelines.MongoPipeline': 400,
+   # 'fang.pipelines.MongoPipeline': 400,
     'fang.pipelines.MysqlTwistedPipline': 420,
 }
 
@@ -38,10 +38,10 @@ SCHEDULER_PERSIST = True
 # REDIS_HOST = '139.155.96.221'
 # REDIS_PORT = 6379
 #如果redis数据库有密码，使用如下方法：
-REDIS_URL = 'redis://:Re_Lei@139.155.96.221:6379'
+REDIS_URL = 'redis://:Re_Lei@129.28.200.147:6379'
 
 # B、建立MongoDB连接
-MONGO_URI = '139.155.96.221'
+MONGO_URI = '129.28.200.147'
 MONGO_DB = 'fangtianxia'
 #在CentOs下写入数据需要使用账号密码连接
 MONGO_USERNAME = 'root'
@@ -49,7 +49,7 @@ MONGO_PASSWORD = 'Mongo_Lei'
 # MONGO_URL = 'mongodb://root:123456@192.168.43.68:27017'
 
 # C、建立MySQL连接
-MYSQL_HOST = '139.155.96.221'
+MYSQL_HOST = '129.28.200.147'
 MYSQL_DATABASE = 'fangtianxia'
 MYSQL_USER = 'root'
 MYSQL_PASSWORD = 'Sql_Lei'
