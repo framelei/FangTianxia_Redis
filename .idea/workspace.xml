@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7fcc673-49c9-4b53-9671-f6518ab80e2e" name="Default Changelist" comment="排除fake_useragent的干扰">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fang/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/fang/middlewares.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fang/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fang/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fang/spiders/fangtianxia.py" beforeDir="false" afterPath="$PROJECT_DIR$/fang/spiders/fangtianxia.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,14 +82,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="493" />
+          <entry key="py" value="518" />
           <entry key="txt" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="22" />
-          <entry key="Python" value="493" />
+          <entry key="Python" value="518" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -116,11 +115,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fang/spiders/fangtianxia.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1175">
-              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="150">
+              <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -128,8 +127,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fang/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-50">
-              <caret line="19" column="38" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+            <state relative-caret-position="-372">
+              <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -143,11 +142,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fang/middlewares.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="129" column="45" selection-start-line="104" selection-end-line="129" selection-end-column="45" />
+            <state relative-caret-position="378">
+              <caret line="63" column="40" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="40" />
+              <folding>
+                <element signature="e#169#195#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -168,11 +170,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/fang/middlewares.py" />
         <option value="$PROJECT_DIR$/fang/items.py" />
         <option value="$PROJECT_DIR$/fang/pipelines.py" />
-        <option value="$PROJECT_DIR$/fang/settings.py" />
         <option value="$PROJECT_DIR$/fang/spiders/fangtianxia.py" />
+        <option value="$PROJECT_DIR$/fang/middlewares.py" />
+        <option value="$PROJECT_DIR$/fang/settings.py" />
       </list>
     </option>
   </component>
@@ -183,8 +185,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
+    <option name="x" value="385" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
   </component>
@@ -491,24 +492,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fang/middlewares.py">
+    <entry file="file://$PROJECT_DIR$/fang/spiders/fangtianxia.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="129" column="45" selection-start-line="104" selection-end-line="129" selection-end-column="45" />
+        <state relative-caret-position="150">
+          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fang/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-50">
-          <caret line="19" column="38" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+        <state relative-caret-position="-372">
+          <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fang/spiders/fangtianxia.py">
+    <entry file="file://$PROJECT_DIR$/fang/middlewares.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1175">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="378">
+          <caret line="63" column="40" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="40" />
+          <folding>
+            <element signature="e#169#195#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

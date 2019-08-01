@@ -22,6 +22,7 @@ ITEM_PIPELINES = {
 
 DOWNLOADER_MIDDLEWARES = {
     'fang.middlewares.UserAgent': 300,
+    'fang.middlewares.ProxyMiddleware': 301,
 }
 
 # 1、确保request存储到redis中
@@ -54,3 +55,5 @@ MYSQL_DATABASE = 'fangtianxia'
 MYSQL_USER = 'root'
 MYSQL_PASSWORD = 'Sql_Lei'
 
+# D、代理url
+PROXY_URL = 'http://129.28.200.147:5556/random'
