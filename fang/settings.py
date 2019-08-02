@@ -6,7 +6,8 @@ NEWSPIDER_MODULE = 'fang.spiders'
 
 ROBOTSTXT_OBEY = False
 
-DOWNLOAD_DELAY = 0.25
+DOWNLOAD_DELAY = 0.1
+CONCURRENT_REQUESTS = 16
 
 DEFAULT_REQUEST_HEADERS = {
   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
