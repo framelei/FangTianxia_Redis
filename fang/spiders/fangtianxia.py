@@ -51,7 +51,6 @@ class FangtianxiaSpider(RedisSpider):
                 yield scrapy.Request(url=newhouse_url,callback=self.parse_newhouse,meta={'info':(province,city_name)})
                 # yield scrapy.Request(url=esf_url,callback=self.parse_esf,meta={'info':(province,city_name)})
 
-
     def parse_newhouse(self,response):
         # 解析新房具体字段
         # meta里面可以携带一些参数信息放到Request里面，在callback函数里面通过response获取
@@ -114,9 +113,9 @@ class FangtianxiaSpider(RedisSpider):
             last_url = response.xpath('//ul[@class="clearfix"]/li[@class="fr"]/a[@class="last"]/@href').extract_first()     # '/house/s/b924/'
             #如果某个冷门城市只有一页数据，last_url就不存在，.split('/')出异常
             if last_url:
-                last_page = last_url.split('/')[-2].replace('b9','')
+                last_page = last_url.split('/')[-2].replace('b1saledate-b9','')
                 for i in range(1,int(last_page)+1):
-                    next_url = urljoin(response.url,'/house/s/b1saledate-b9{page}/'.format(page=i))
+                    next_url = urljoin(response.url,'/house/s/b1saledate-b9{page}/'.format(page=str(i)))
                     if next_url:
                         yield scrapy.Request(url=next_url,
                                              callback=self.parse_newhouse,
