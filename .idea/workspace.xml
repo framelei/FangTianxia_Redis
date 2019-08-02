@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7fcc673-49c9-4b53-9671-f6518ab80e2e" name="Default Changelist" comment="排除fake_useragent的干扰">
-      <change afterPath="$PROJECT_DIR$/fang/spiders/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fang/spiders/NewHouse20190802.txt" beforeDir="false" afterPath="$PROJECT_DIR$/fang/spiders/NewHouse20190802.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fang/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/fang/middlewares.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fang/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/fang/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fang/spiders/fangtianxia.py" beforeDir="false" afterPath="$PROJECT_DIR$/fang/spiders/fangtianxia.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,23 +77,23 @@
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.2" value="4" />
           <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="673" />
+          <entry key="py" value="678" />
           <entry key="txt" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="22" />
-          <entry key="Python" value="673" />
+          <entry key="Python" value="678" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -120,14 +119,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fang/spiders/fangtianxia.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="122" column="46" lean-forward="true" selection-start-line="122" selection-start-column="46" selection-end-line="122" selection-end-column="46" />
+            <state relative-caret-position="489">
+              <caret line="186" column="42" selection-start-line="186" selection-start-column="42" selection-end-line="186" selection-end-column="42" />
               <folding>
-                <element signature="e#377#2227#0" />
-                <element signature="e#5801#8851#0" />
+                <element signature="e#378#2621#0" />
+                <element signature="e#2670#6176#0" />
               </folding>
             </state>
           </provider>
@@ -145,8 +144,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fang/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="250">
+              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -163,9 +162,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fang/middlewares.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="49">
-              <caret line="8" selection-start-line="8" selection-end-line="68" selection-end-column="43" />
+            <state relative-caret-position="603">
+              <caret line="81" column="27" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="27" />
               <folding>
+                <element signature="e#169#195#0" expanded="true" />
                 <element signature="e#257#2629#0" />
                 <element signature="e#2661#3500#0" />
               </folding>
@@ -173,10 +173,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fang/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
+            <state relative-caret-position="250">
               <caret line="54" selection-start-line="54" selection-end-line="94" selection-end-column="49" />
               <folding>
                 <element signature="e#99#673#0" />
@@ -205,9 +205,9 @@
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/fang/items.py" />
         <option value="$PROJECT_DIR$/fang/pipelines.py" />
+        <option value="$PROJECT_DIR$/fang/spiders/main.py" />
         <option value="$PROJECT_DIR$/fang/middlewares.py" />
         <option value="$PROJECT_DIR$/fang/settings.py" />
-        <option value="$PROJECT_DIR$/fang/spiders/main.py" />
         <option value="$PROJECT_DIR$/fang/spiders/fangtianxia.py" />
       </list>
     </option>
@@ -219,7 +219,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="385" />
+    <option name="x" value="605" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
   </component>
@@ -384,10 +384,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15348525" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17761394" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -419,17 +418,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="排除fake_useragent的干扰" />
     <option name="LAST_COMMIT_MESSAGE" value="排除fake_useragent的干扰" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/fang/spiders/fangtianxia.py</url>
-          <line>119</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://D:/Python3.6/Anaconda3/Lib/site-packages/scrapy/spiderloader.py">
@@ -542,24 +530,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Python3.6/Anaconda3/Lib/site-packages/twisted/internet/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19750">
-          <caret line="821" selection-start-line="821" selection-end-line="821" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fang/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1475">
-          <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fang/spiders/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="3" column="58" selection-start-line="3" selection-start-column="58" selection-end-line="3" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Python3.6/Anaconda3/Lib/site-packages/twisted/internet/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19750">
+          <caret line="821" selection-start-line="821" selection-end-line="821" />
         </state>
       </provider>
     </entry>
@@ -570,43 +551,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fang/settings.py">
+    <entry file="file://$PROJECT_DIR$/fang/items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="1475">
+          <caret line="60" column="24" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fang/spiders/fangtianxia.py">
+    <entry file="file://$PROJECT_DIR$/fang/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="122" column="46" lean-forward="true" selection-start-line="122" selection-start-column="46" selection-end-line="122" selection-end-column="46" />
+        <state relative-caret-position="250">
+          <caret line="54" selection-start-line="54" selection-end-line="94" selection-end-column="49" />
           <folding>
-            <element signature="e#377#2227#0" />
-            <element signature="e#5801#8851#0" />
+            <element signature="e#99#673#0" />
+            <element signature="e#722#1791#0" />
+            <element signature="e#1928#3208#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fang/middlewares.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="8" selection-start-line="8" selection-end-line="68" selection-end-column="43" />
+        <state relative-caret-position="603">
+          <caret line="81" column="27" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="27" />
           <folding>
+            <element signature="e#169#195#0" expanded="true" />
             <element signature="e#257#2629#0" />
             <element signature="e#2661#3500#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fang/pipelines.py">
+    <entry file="file://$PROJECT_DIR$/fang/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="54" selection-start-line="54" selection-end-line="94" selection-end-column="49" />
+        <state relative-caret-position="250">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fang/spiders/fangtianxia.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="186" column="42" selection-start-line="186" selection-start-column="42" selection-end-line="186" selection-end-column="42" />
           <folding>
-            <element signature="e#99#673#0" />
-            <element signature="e#722#1791#0" />
-            <element signature="e#1928#3208#0" />
+            <element signature="e#378#2621#0" />
+            <element signature="e#2670#6176#0" />
           </folding>
         </state>
       </provider>

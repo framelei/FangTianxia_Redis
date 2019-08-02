@@ -67,3 +67,16 @@ class ProxyMiddleware():
                 uri = 'https://{proxy}'.format(proxy=proxy)
                 print('正在使用代理',uri)
                 request.meta['proxy'] = uri
+
+class Captcha_Middleware:
+
+    def process_response(self, request, response, spider):
+        # 验证码格式   'http://search.fang.com/captcha-verify/redirect?h=https://esf.fang.com/house/h316-i31/'
+        #如果出现验证码重新放入调度队列
+        if 'captcha-verify' in response.url:
+            print('出现验证码，重新放入调度队列')
+            return request
+        elif '跳转...' in response.text:
+            return request
+        elif response.status == 200:
+            return response

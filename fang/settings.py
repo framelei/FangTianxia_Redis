@@ -23,6 +23,7 @@ ITEM_PIPELINES = {
 DOWNLOADER_MIDDLEWARES = {
     'fang.middlewares.UserAgent': 300,
     'fang.middlewares.ProxyMiddleware': 301,
+    'fang.middlewares.Captcha_Middleware': 302,
 }
 
 # 1、确保request存储到redis中
