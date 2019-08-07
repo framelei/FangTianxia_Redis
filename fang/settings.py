@@ -51,7 +51,7 @@ MONGO_PASSWORD = 'Mongo_Lei'
 # MONGO_URL = 'mongodb://root:123456@192.168.43.68:27017'
 
 # C、建立MySQL连接
-MYSQL_HOST = '129.28.200.147'
+MYSQL_HOST = 'localhost'
 MYSQL_DATABASE = 'fangtianxia'
 MYSQL_USER = 'root'
 MYSQL_PASSWORD = 'Sql_Lei'
@@ -60,10 +60,10 @@ MYSQL_PASSWORD = 'Sql_Lei'
 PROXY_URL = 'http://129.28.200.147:5557/random'
 
 # E、设置日志级别，保存信息
-LOG_LEVEL = "INFO"
+# LOG_LEVEL = "INFO"
 import datetime
 startDate = datetime.datetime.now().strftime('%Y%m%d')
-LOG_FILE=f"NewHouse{startDate}.txt"
+LOG_FILE=f"EsfHouse{startDate}.txt"
 
 # F、设置最大等待时间、失败重试次数
 #默认响应时间是180s，长时间不释放会占用一个并发量影响效率

@@ -51,7 +51,6 @@ class MongoPipeline(object):
         self.client.close()
 
 
-
 # 保存到MySQL
 from twisted.enterprise import adbapi   #enterprise:事业、企业
 import MySQLdb.cursors

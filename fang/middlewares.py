@@ -62,19 +62,30 @@ class ProxyMiddleware():
         #使用代理池中的ip发起请求
         #retry_times，当第一次请求失败时再启动代理ip。因为本机ip更稳定
         if request.meta.get('retry_times'):
-            proxy = self.get_random_proxy()
+            proxy = self.get_random_proxy()         #180.104.2.55:8888
             if proxy:
+                apply = str(request).split(':')[0]       #<GET https、<GET http
+                if apply == '<GET https':
+                    uri = 'https://{proxy}'.format(proxy=proxy)
+                else:
+                    uri = 'http://{proxy}'.format(proxy=proxy)
+                print('正在使用代理',uri,'      爬取：',request)
+                request.meta['proxy'] = uri
                 uri = 'https://{proxy}'.format(proxy=proxy)
-                print('正在使用代理',uri)
+                print('正在使用代理',uri,'   处理：',request)
                 request.meta['proxy'] = uri
 
 class Captcha_Middleware:
 
     def process_response(self, request, response, spider):
         # 验证码格式   'http://search.fang.com/captcha-verify/redirect?h=https://esf.fang.com/house/h316-i31/'
-        #如果出现验证码重新放入调度队列
+        #如果出现验证码,处理url，重新放入调度队列
         if 'captcha-verify' in response.url:
             print('出现验证码，重新放入调度队列')
+            # http://search.fang.com/captcha-verify/redirect?h=https://pinghu.esf.fang.com/house/h316-i35/
+            print('出现验证码的url是：', response.url)
+            request = str(request).replace('http://search.fang.com/captcha-verify/redirect?h=','')
+            print('放入调度队列的url是：',request)         #<GET https://pinghu.esf.fang.com/house/h316-i35/>
             return request
         elif '跳转...' in response.text:
             return request

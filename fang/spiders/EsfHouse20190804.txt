@@ -1,0 +1,1339 @@
+2019-08-04 16:21:58 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: fang)
+2019-08-04 16:21:58 [scrapy.utils.log] INFO: Versions: lxml 3.7.2.0, libxml2 2.9.4, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.6.5 |Anaconda, Inc.| (default, Mar 29 2018, 13:32:41) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Windows-10-10.0.17763-SP0
+2019-08-04 16:21:58 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'fang', 'DOWNLOAD_DELAY': 0.1, 'DOWNLOAD_TIMEOUT': 10, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'EsfHouse20190804.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'fang.spiders', 'RETRY_TIMES': 3, 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_LOADER_WARN_ONLY': True, 'SPIDER_MODULES': ['fang.spiders']}
+2019-08-04 16:21:58 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-04 16:21:58 [fang] INFO: Reading start URLs from redis key 'fangtianxia:start_urls' (batch size: 16, encoding: utf-8
+2019-08-04 16:21:58 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'fang.middlewares.UserAgent',
+ 'fang.middlewares.ProxyMiddleware',
+ 'fang.middlewares.Captcha_Middleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-04 16:21:58 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-04 16:21:59 [scrapy.middleware] INFO: Enabled item pipelines:
+['fang.pipelines.MysqlTwistedPipline']
+2019-08-04 16:21:59 [scrapy.core.engine] INFO: Spider opened
+2019-08-04 16:21:59 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-04 16:22:59 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-04 16:23:59 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-04 16:24:55 [scrapy.core.scraper] ERROR: Error downloading <GET http://quanjiao.esf.fang.com/house/h316-i31/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1362, in returnValue
+    raise _DefGen_Return(val)
+twisted.internet.defer._DefGen_Return: <404 http://quanjiao.esf.fang.com/house/h316-i31/>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 56, in process_response
+    (six.get_method_self(method).__class__.__name__, type(response))
+AssertionError: Middleware Captcha_Middleware.process_response must return Response or Request, got <class 'NoneType'>
+2019-08-04 16:25:00 [scrapy.extensions.logstats] INFO: Crawled 27 pages (at 27 pages/min), scraped 813 items (at 813 items/min)
+2019-08-04 16:25:00 [scrapy.core.scraper] ERROR: Error downloading <GET http://cqjiangjin.esf.fang.com/house/h316-i31/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1362, in returnValue
+    raise _DefGen_Return(val)
+twisted.internet.defer._DefGen_Return: <404 http://cqjiangjin.esf.fang.com/house/h316-i31/>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 56, in process_response
+    (six.get_method_self(method).__class__.__name__, type(response))
+AssertionError: Middleware Captcha_Middleware.process_response must return Response or Request, got <class 'NoneType'>
+2019-08-04 16:25:00 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://sh.esf.fang.com/house/h316-i31/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 16:26:00 [scrapy.extensions.logstats] INFO: Crawled 29 pages (at 2 pages/min), scraped 1352 items (at 539 items/min)
+2019-08-04 16:26:59 [scrapy.extensions.logstats] INFO: Crawled 29 pages (at 0 pages/min), scraped 1352 items (at 0 items/min)
+2019-08-04 16:27:09 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2019-08-04 16:27:10 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2019-08-04 16:27:59 [scrapy.extensions.logstats] INFO: Crawled 29 pages (at 0 pages/min), scraped 1352 items (at 0 items/min)
+2019-08-04 16:28:22 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 45,
+ 'downloader/exception_type_count/scrapy.core.downloader.handlers.http11.TunnelError': 2,
+ 'downloader/exception_type_count/twisted.internet.error.DNSLookupError': 1,
+ 'downloader/exception_type_count/twisted.internet.error.TimeoutError': 39,
+ 'downloader/exception_type_count/twisted.web._newclient.ResponseNeverReceived': 3,
+ 'downloader/request_bytes': 117571,
+ 'downloader/request_count': 302,
+ 'downloader/request_method_count/GET': 302,
+ 'downloader/response_bytes': 2184958,
+ 'downloader/response_count': 257,
+ 'downloader/response_status_count/200': 117,
+ 'downloader/response_status_count/302': 138,
+ 'downloader/response_status_count/404': 2,
+ 'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2019, 8, 4, 8, 28, 22, 868142),
+ 'item_scraped_count': 1352,
+ 'log_count/ERROR': 3,
+ 'log_count/INFO': 15,
+ 'offsite/domains': 1,
+ 'offsite/filtered': 4,
+ 'request_depth_max': 2,
+ 'response_received_count': 29,
+ 'retry/count': 44,
+ 'retry/max_reached': 1,
+ 'retry/reason_count/scrapy.core.downloader.handlers.http11.TunnelError': 2,
+ 'retry/reason_count/twisted.internet.error.DNSLookupError': 1,
+ 'retry/reason_count/twisted.internet.error.TimeoutError': 39,
+ 'retry/reason_count/twisted.web._newclient.ResponseNeverReceived': 2,
+ 'scheduler/dequeued/redis': 302,
+ 'scheduler/enqueued/redis': 1172,
+ 'start_time': datetime.datetime(2019, 8, 4, 8, 21, 59, 418960)}
+2019-08-04 16:28:22 [scrapy.core.engine] INFO: Spider closed (shutdown)
+2019-08-04 16:29:42 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: fang)
+2019-08-04 16:29:42 [scrapy.utils.log] INFO: Versions: lxml 3.7.2.0, libxml2 2.9.4, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.6.5 |Anaconda, Inc.| (default, Mar 29 2018, 13:32:41) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Windows-10-10.0.17763-SP0
+2019-08-04 16:29:42 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'fang', 'DOWNLOAD_DELAY': 0.25, 'DOWNLOAD_TIMEOUT': 10, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'EsfHouse20190804.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'fang.spiders', 'RETRY_TIMES': 3, 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_LOADER_WARN_ONLY': True, 'SPIDER_MODULES': ['fang.spiders']}
+2019-08-04 16:29:42 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-04 16:29:42 [fang] INFO: Reading start URLs from redis key 'fangtianxia:start_urls' (batch size: 16, encoding: utf-8
+2019-08-04 16:29:43 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'fang.middlewares.UserAgent',
+ 'fang.middlewares.ProxyMiddleware',
+ 'fang.middlewares.Captcha_Middleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-04 16:29:43 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-04 16:29:43 [scrapy.middleware] INFO: Enabled item pipelines:
+['fang.pipelines.MysqlTwistedPipline']
+2019-08-04 16:29:43 [scrapy.core.engine] INFO: Spider opened
+2019-08-04 16:29:43 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-04 16:30:22 [scrapy.core.scraper] ERROR: Error downloading <GET http://quanjiao.esf.fang.com/house/h316-i31/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1362, in returnValue
+    raise _DefGen_Return(val)
+twisted.internet.defer._DefGen_Return: <404 http://quanjiao.esf.fang.com/house/h316-i31/>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 56, in process_response
+    (six.get_method_self(method).__class__.__name__, type(response))
+AssertionError: Middleware Captcha_Middleware.process_response must return Response or Request, got <class 'NoneType'>
+2019-08-04 16:30:25 [scrapy.core.scraper] ERROR: Error downloading <GET http://cqjiangjin.esf.fang.com/house/h316-i31/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1362, in returnValue
+    raise _DefGen_Return(val)
+twisted.internet.defer._DefGen_Return: <404 http://cqjiangjin.esf.fang.com/house/h316-i31/>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 56, in process_response
+    (six.get_method_self(method).__class__.__name__, type(response))
+AssertionError: Middleware Captcha_Middleware.process_response must return Response or Request, got <class 'NoneType'>
+2019-08-04 16:30:25 [scrapy.core.scraper] ERROR: Error downloading <GET http://cqtongliang.esf.fang.com/house/h316-i31/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1362, in returnValue
+    raise _DefGen_Return(val)
+twisted.internet.defer._DefGen_Return: <404 http://cqtongliang.esf.fang.com/house/h316-i31/>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 56, in process_response
+    (six.get_method_self(method).__class__.__name__, type(response))
+AssertionError: Middleware Captcha_Middleware.process_response must return Response or Request, got <class 'NoneType'>
+2019-08-04 16:30:30 [scrapy.core.scraper] ERROR: Error downloading <GET http://cqnanchuan.esf.fang.com/house/h316-i31/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1362, in returnValue
+    raise _DefGen_Return(val)
+twisted.internet.defer._DefGen_Return: <404 http://cqnanchuan.esf.fang.com/house/h316-i31/>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 56, in process_response
+    (six.get_method_self(method).__class__.__name__, type(response))
+AssertionError: Middleware Captcha_Middleware.process_response must return Response or Request, got <class 'NoneType'>
+2019-08-04 16:30:31 [scrapy.core.scraper] ERROR: Error downloading <GET http://cqdazu.esf.fang.com/house/h316-i31/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1362, in returnValue
+    raise _DefGen_Return(val)
+twisted.internet.defer._DefGen_Return: <404 http://cqdazu.esf.fang.com/house/h316-i31/>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 56, in process_response
+    (six.get_method_self(method).__class__.__name__, type(response))
+AssertionError: Middleware Captcha_Middleware.process_response must return Response or Request, got <class 'NoneType'>
+2019-08-04 16:30:44 [scrapy.extensions.logstats] INFO: Crawled 24 pages (at 24 pages/min), scraped 1062 items (at 1062 items/min)
+2019-08-04 16:31:32 [scrapy.core.scraper] ERROR: Error downloading <GET https://cq.esf.fang.com/house-a015879-b07496/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1416, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\python\failure.py", line 491, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 351, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://cq.esf.fang.com/house-a015879-b07496/ took longer than 10.0 seconds..
+2019-08-04 16:31:44 [scrapy.extensions.logstats] INFO: Crawled 24 pages (at 0 pages/min), scraped 1182 items (at 120 items/min)
+2019-08-04 16:32:44 [scrapy.extensions.logstats] INFO: Crawled 25 pages (at 1 pages/min), scraped 1182 items (at 0 items/min)
+2019-08-04 16:33:19 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2019-08-04 16:33:19 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2019-08-04 16:33:23 [scrapy.crawler] INFO: Received SIGINT twice, forcing unclean shutdown
+2019-08-04 17:26:05 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: fang)
+2019-08-04 17:26:05 [scrapy.utils.log] INFO: Versions: lxml 3.7.2.0, libxml2 2.9.4, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.6.5 |Anaconda, Inc.| (default, Mar 29 2018, 13:32:41) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Windows-10-10.0.17763-SP0
+2019-08-04 17:26:05 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'fang', 'DOWNLOAD_DELAY': 0.25, 'DOWNLOAD_TIMEOUT': 10, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'EsfHouse20190804.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'fang.spiders', 'RETRY_TIMES': 3, 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_LOADER_WARN_ONLY': True, 'SPIDER_MODULES': ['fang.spiders']}
+2019-08-04 17:26:05 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-04 17:26:05 [fang] INFO: Reading start URLs from redis key 'fangtianxia:start_urls' (batch size: 16, encoding: utf-8
+2019-08-04 17:26:05 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'fang.middlewares.UserAgent',
+ 'fang.middlewares.ProxyMiddleware',
+ 'fang.middlewares.Captcha_Middleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-04 17:26:05 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-04 17:26:05 [scrapy.middleware] INFO: Enabled item pipelines:
+['fang.pipelines.MysqlTwistedPipline']
+2019-08-04 17:26:05 [scrapy.core.engine] INFO: Spider opened
+2019-08-04 17:26:06 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-04 17:27:06 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-04 17:27:41 [scrapy.core.scraper] ERROR: Error downloading <GET http://quanjiao.esf.fang.com/house/h316-i31/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1362, in returnValue
+    raise _DefGen_Return(val)
+twisted.internet.defer._DefGen_Return: <404 http://quanjiao.esf.fang.com/house/h316-i31/>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 56, in process_response
+    (six.get_method_self(method).__class__.__name__, type(response))
+AssertionError: Middleware Captcha_Middleware.process_response must return Response or Request, got <class 'NoneType'>
+2019-08-04 17:27:47 [scrapy.core.scraper] ERROR: Error downloading <GET http://cqchangshou.esf.fang.com/house/h316-i31/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1362, in returnValue
+    raise _DefGen_Return(val)
+twisted.internet.defer._DefGen_Return: <404 http://cqchangshou.esf.fang.com/house/h316-i31/>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 56, in process_response
+    (six.get_method_self(method).__class__.__name__, type(response))
+AssertionError: Middleware Captcha_Middleware.process_response must return Response or Request, got <class 'NoneType'>
+2019-08-04 17:27:47 [scrapy.core.scraper] ERROR: Error downloading <GET http://cqjiangjin.esf.fang.com/house/h316-i31/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1362, in returnValue
+    raise _DefGen_Return(val)
+twisted.internet.defer._DefGen_Return: <404 http://cqjiangjin.esf.fang.com/house/h316-i31/>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 56, in process_response
+    (six.get_method_self(method).__class__.__name__, type(response))
+AssertionError: Middleware Captcha_Middleware.process_response must return Response or Request, got <class 'NoneType'>
+2019-08-04 17:27:47 [scrapy.core.scraper] ERROR: Error downloading <GET http://cqnanchuan.esf.fang.com/house/h316-i31/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1362, in returnValue
+    raise _DefGen_Return(val)
+twisted.internet.defer._DefGen_Return: <404 http://cqnanchuan.esf.fang.com/house/h316-i31/>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1418, in _inlineCallbacks
+    result = g.send(result)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 56, in process_response
+    (six.get_method_self(method).__class__.__name__, type(response))
+AssertionError: Middleware Captcha_Middleware.process_response must return Response or Request, got <class 'NoneType'>
+2019-08-04 17:28:08 [scrapy.extensions.logstats] INFO: Crawled 29 pages (at 29 pages/min), scraped 1253 items (at 1253 items/min)
+2019-08-04 17:28:57 [scrapy.core.scraper] ERROR: Error downloading <GET https://cq.esf.fang.com/house-a011828/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1416, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\python\failure.py", line 491, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 351, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://cq.esf.fang.com/house-a011828/ took longer than 10.0 seconds..
+2019-08-04 17:28:59 [scrapy.core.scraper] ERROR: Error downloading <GET https://cq.esf.fang.com/house-a011841/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 1416, in _inlineCallbacks
+    result = result.throwExceptionIntoGenerator(g)
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\python\failure.py", line 491, in throwExceptionIntoGenerator
+    return g.throw(self.type, self.value, self.tb)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+  File "d:\python3.6\anaconda3\lib\site-packages\twisted\internet\defer.py", line 654, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\handlers\http11.py", line 351, in _cb_timeout
+    raise TimeoutError("Getting %s took longer than %s seconds." % (url, timeout))
+twisted.internet.error.TimeoutError: User timeout caused connection failure: Getting https://cq.esf.fang.com/house-a011841/ took longer than 10.0 seconds..
+2019-08-04 17:29:08 [scrapy.extensions.logstats] INFO: Crawled 29 pages (at 0 pages/min), scraped 1352 items (at 99 items/min)
+2019-08-04 17:30:07 [scrapy.extensions.logstats] INFO: Crawled 30 pages (at 1 pages/min), scraped 1371 items (at 19 items/min)
+2019-08-04 17:30:54 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2019-08-04 17:30:54 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2019-08-04 17:31:06 [scrapy.extensions.logstats] INFO: Crawled 31 pages (at 1 pages/min), scraped 1472 items (at 101 items/min)
+2019-08-04 17:31:34 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 94,
+ 'downloader/exception_type_count/scrapy.core.downloader.handlers.http11.TunnelError': 1,
+ 'downloader/exception_type_count/twisted.internet.error.DNSLookupError': 1,
+ 'downloader/exception_type_count/twisted.internet.error.TimeoutError': 92,
+ 'downloader/request_bytes': 158293,
+ 'downloader/request_count': 404,
+ 'downloader/request_method_count/GET': 404,
+ 'downloader/response_bytes': 2666228,
+ 'downloader/response_count': 310,
+ 'downloader/response_status_count/200': 145,
+ 'downloader/response_status_count/301': 2,
+ 'downloader/response_status_count/302': 159,
+ 'downloader/response_status_count/404': 4,
+ 'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2019, 8, 4, 9, 31, 34, 604840),
+ 'item_scraped_count': 1472,
+ 'log_count/ERROR': 6,
+ 'log_count/INFO': 14,
+ 'offsite/domains': 1,
+ 'offsite/filtered': 4,
+ 'request_depth_max': 2,
+ 'response_received_count': 31,
+ 'retry/count': 92,
+ 'retry/max_reached': 2,
+ 'retry/reason_count/scrapy.core.downloader.handlers.http11.TunnelError': 1,
+ 'retry/reason_count/twisted.internet.error.DNSLookupError': 1,
+ 'retry/reason_count/twisted.internet.error.TimeoutError': 90,
+ 'scheduler/dequeued/redis': 404,
+ 'scheduler/enqueued/redis': 1256,
+ 'start_time': datetime.datetime(2019, 8, 4, 9, 26, 6, 373365)}
+2019-08-04 17:31:34 [scrapy.core.engine] INFO: Spider closed (shutdown)
+2019-08-04 17:50:06 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: fang)
+2019-08-04 17:50:06 [scrapy.utils.log] INFO: Versions: lxml 3.7.2.0, libxml2 2.9.4, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.6.5 |Anaconda, Inc.| (default, Mar 29 2018, 13:32:41) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Windows-10-10.0.17763-SP0
+2019-08-04 17:50:06 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'fang', 'DOWNLOAD_DELAY': 0.25, 'DOWNLOAD_TIMEOUT': 10, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'EsfHouse20190804.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'fang.spiders', 'RETRY_TIMES': 3, 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_LOADER_WARN_ONLY': True, 'SPIDER_MODULES': ['fang.spiders']}
+2019-08-04 17:50:06 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-04 17:50:06 [fang] INFO: Reading start URLs from redis key 'fangtianxia:start_urls' (batch size: 16, encoding: utf-8
+2019-08-04 17:50:07 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'fang.middlewares.UserAgent',
+ 'fang.middlewares.ProxyMiddleware',
+ 'fang.middlewares.Captcha_Middleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-04 17:50:07 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-04 17:50:07 [scrapy.middleware] INFO: Enabled item pipelines:
+['fang.pipelines.MysqlTwistedPipline']
+2019-08-04 17:50:07 [scrapy.core.engine] INFO: Spider opened
+2019-08-04 17:50:07 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-04 17:50:59 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2019-08-04 17:50:59 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2019-08-04 17:51:04 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 6,
+ 'downloader/exception_type_count/twisted.internet.error.DNSLookupError': 1,
+ 'downloader/exception_type_count/twisted.internet.error.TimeoutError': 5,
+ 'downloader/request_bytes': 66155,
+ 'downloader/request_count': 163,
+ 'downloader/request_method_count/GET': 163,
+ 'downloader/response_bytes': 1274984,
+ 'downloader/response_count': 157,
+ 'downloader/response_status_count/200': 77,
+ 'downloader/response_status_count/302': 80,
+ 'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2019, 8, 4, 9, 51, 4, 408778),
+ 'item_scraped_count': 144,
+ 'log_count/INFO': 9,
+ 'request_depth_max': 2,
+ 'response_received_count': 3,
+ 'retry/count': 6,
+ 'retry/reason_count/twisted.internet.error.DNSLookupError': 1,
+ 'retry/reason_count/twisted.internet.error.TimeoutError': 5,
+ 'scheduler/dequeued/redis': 163,
+ 'scheduler/enqueued/redis': 181,
+ 'start_time': datetime.datetime(2019, 8, 4, 9, 50, 7, 669175)}
+2019-08-04 17:51:04 [scrapy.core.engine] INFO: Spider closed (shutdown)
+2019-08-04 17:57:03 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: fang)
+2019-08-04 17:57:03 [scrapy.utils.log] INFO: Versions: lxml 3.7.2.0, libxml2 2.9.4, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.6.5 |Anaconda, Inc.| (default, Mar 29 2018, 13:32:41) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Windows-10-10.0.17763-SP0
+2019-08-04 17:57:03 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'fang', 'CONCURRENT_REQUESTS': 2, 'DOWNLOAD_DELAY': 0.25, 'DOWNLOAD_TIMEOUT': 10, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'EsfHouse20190804.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'fang.spiders', 'RETRY_TIMES': 3, 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_LOADER_WARN_ONLY': True, 'SPIDER_MODULES': ['fang.spiders']}
+2019-08-04 17:57:03 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-04 17:57:03 [fang] INFO: Reading start URLs from redis key 'fangtianxia:start_urls' (batch size: 2, encoding: utf-8
+2019-08-04 17:57:04 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'fang.middlewares.UserAgent',
+ 'fang.middlewares.ProxyMiddleware',
+ 'fang.middlewares.Captcha_Middleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-04 17:57:04 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-04 17:57:04 [scrapy.middleware] INFO: Enabled item pipelines:
+['fang.pipelines.MysqlTwistedPipline']
+2019-08-04 17:57:04 [scrapy.core.engine] INFO: Spider opened
+2019-08-04 17:57:05 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-04 17:57:12 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2019-08-04 17:57:12 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2019-08-04 17:57:14 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 9383,
+ 'downloader/request_count': 23,
+ 'downloader/request_method_count/GET': 23,
+ 'downloader/response_bytes': 253245,
+ 'downloader/response_count': 23,
+ 'downloader/response_status_count/200': 15,
+ 'downloader/response_status_count/302': 8,
+ 'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2019, 8, 4, 9, 57, 14, 874361),
+ 'log_count/INFO': 9,
+ 'scheduler/dequeued/redis': 23,
+ 'scheduler/enqueued/redis': 8,
+ 'start_time': datetime.datetime(2019, 8, 4, 9, 57, 5, 253854)}
+2019-08-04 17:57:14 [scrapy.core.engine] INFO: Spider closed (shutdown)
+2019-08-04 18:02:00 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: fang)
+2019-08-04 18:02:00 [scrapy.utils.log] INFO: Versions: lxml 3.7.2.0, libxml2 2.9.4, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.6.5 |Anaconda, Inc.| (default, Mar 29 2018, 13:32:41) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Windows-10-10.0.17763-SP0
+2019-08-04 18:02:00 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'fang', 'DOWNLOAD_DELAY': 0.25, 'DOWNLOAD_TIMEOUT': 10, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'EsfHouse20190804.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'fang.spiders', 'RETRY_TIMES': 3, 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_LOADER_WARN_ONLY': True, 'SPIDER_MODULES': ['fang.spiders']}
+2019-08-04 18:02:00 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-04 18:02:00 [fang] INFO: Reading start URLs from redis key 'fangtianxia:start_urls' (batch size: 16, encoding: utf-8
+2019-08-04 18:02:00 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'fang.middlewares.UserAgent',
+ 'fang.middlewares.ProxyMiddleware',
+ 'fang.middlewares.Captcha_Middleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-04 18:02:00 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-04 18:02:00 [scrapy.middleware] INFO: Enabled item pipelines:
+['fang.pipelines.MysqlTwistedPipline']
+2019-08-04 18:02:00 [scrapy.core.engine] INFO: Spider opened
+2019-08-04 18:02:01 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-04 18:03:01 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-04 18:03:38 [scrapy.core.scraper] ERROR: Error downloading <GET http://cq.esf.fang.com/house-a015878-b0264/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:04:01 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-04 18:05:01 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-04 18:06:01 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-04 18:07:01 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-04 18:07:40 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2019-08-04 18:07:40 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2019-08-04 18:07:41 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 594,
+ 'downloader/exception_type_count/scrapy.core.downloader.handlers.http11.TunnelError': 3,
+ 'downloader/exception_type_count/twisted.internet.error.ConnectionRefusedError': 11,
+ 'downloader/exception_type_count/twisted.internet.error.TimeoutError': 12,
+ 'downloader/exception_type_count/twisted.web._newclient.ResponseNeverReceived': 568,
+ 'downloader/request_bytes': 307699,
+ 'downloader/request_count': 761,
+ 'downloader/request_method_count/GET': 761,
+ 'downloader/response_bytes': 66020,
+ 'downloader/response_count': 167,
+ 'downloader/response_status_count/301': 1,
+ 'downloader/response_status_count/302': 166,
+ 'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2019, 8, 4, 10, 7, 41, 677379),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 14,
+ 'retry/count': 593,
+ 'retry/max_reached': 1,
+ 'retry/reason_count/scrapy.core.downloader.handlers.http11.TunnelError': 3,
+ 'retry/reason_count/twisted.internet.error.ConnectionRefusedError': 11,
+ 'retry/reason_count/twisted.internet.error.TimeoutError': 12,
+ 'retry/reason_count/twisted.web._newclient.ResponseNeverReceived': 567,
+ 'scheduler/dequeued/redis': 761,
+ 'scheduler/enqueued/redis': 760,
+ 'start_time': datetime.datetime(2019, 8, 4, 10, 2, 1, 389868)}
+2019-08-04 18:07:41 [scrapy.core.engine] INFO: Spider closed (shutdown)
+2019-08-04 18:11:47 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: fang)
+2019-08-04 18:11:47 [scrapy.utils.log] INFO: Versions: lxml 3.7.2.0, libxml2 2.9.4, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.6.5 |Anaconda, Inc.| (default, Mar 29 2018, 13:32:41) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Windows-10-10.0.17763-SP0
+2019-08-04 18:11:47 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'fang', 'CONCURRENT_REQUESTS': 2, 'DOWNLOAD_DELAY': 0.25, 'DOWNLOAD_TIMEOUT': 10, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'EsfHouse20190804.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'fang.spiders', 'RETRY_TIMES': 3, 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_LOADER_WARN_ONLY': True, 'SPIDER_MODULES': ['fang.spiders']}
+2019-08-04 18:11:47 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-04 18:11:47 [fang] INFO: Reading start URLs from redis key 'fangtianxia:start_urls' (batch size: 2, encoding: utf-8
+2019-08-04 18:11:48 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'fang.middlewares.UserAgent',
+ 'fang.middlewares.ProxyMiddleware',
+ 'fang.middlewares.Captcha_Middleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-04 18:11:48 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-04 18:11:48 [scrapy.middleware] INFO: Enabled item pipelines:
+['fang.pipelines.MysqlTwistedPipline']
+2019-08-04 18:11:48 [scrapy.core.engine] INFO: Spider opened
+2019-08-04 18:11:48 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-04 18:12:48 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-04 18:12:52 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2019-08-04 18:12:52 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2019-08-04 18:12:52 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 145,
+ 'downloader/exception_type_count/twisted.web._newclient.ResponseNeverReceived': 145,
+ 'downloader/request_bytes': 50928,
+ 'downloader/request_count': 145,
+ 'downloader/request_method_count/GET': 145,
+ 'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2019, 8, 4, 10, 12, 52, 374815),
+ 'log_count/INFO': 10,
+ 'retry/count': 145,
+ 'retry/reason_count/twisted.web._newclient.ResponseNeverReceived': 145,
+ 'scheduler/dequeued/redis': 145,
+ 'scheduler/enqueued/redis': 145,
+ 'start_time': datetime.datetime(2019, 8, 4, 10, 11, 48, 766170)}
+2019-08-04 18:12:52 [scrapy.core.engine] INFO: Spider closed (shutdown)
+2019-08-04 18:15:22 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: fang)
+2019-08-04 18:15:22 [scrapy.utils.log] INFO: Versions: lxml 3.7.2.0, libxml2 2.9.4, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.6.5 |Anaconda, Inc.| (default, Mar 29 2018, 13:32:41) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Windows-10-10.0.17763-SP0
+2019-08-04 18:15:22 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'fang', 'CONCURRENT_REQUESTS': 2, 'DOWNLOAD_DELAY': 0.25, 'DOWNLOAD_TIMEOUT': 10, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'EsfHouse20190804.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'fang.spiders', 'RETRY_TIMES': 3, 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_LOADER_WARN_ONLY': True, 'SPIDER_MODULES': ['fang.spiders']}
+2019-08-04 18:15:22 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-04 18:15:22 [fang] INFO: Reading start URLs from redis key 'fangtianxia:start_urls' (batch size: 2, encoding: utf-8
+2019-08-04 18:15:23 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'fang.middlewares.UserAgent',
+ 'fang.middlewares.ProxyMiddleware',
+ 'fang.middlewares.Captcha_Middleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-04 18:15:23 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-04 18:15:23 [scrapy.middleware] INFO: Enabled item pipelines:
+['fang.pipelines.MysqlTwistedPipline']
+2019-08-04 18:15:23 [scrapy.core.engine] INFO: Spider opened
+2019-08-04 18:15:24 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-04 18:16:24 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-04 18:17:24 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-04 18:18:01 [scrapy.core.scraper] ERROR: Error downloading <GET http://cq.esf.fang.com/house-a015879-b07496/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:01 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i328/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:02 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i335/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:03 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i344/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:03 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i349/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:04 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huainan.esf.fang.com/house/h316-i311/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:04 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i313/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:04 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i318/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:05 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i326/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:05 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i331/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:06 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i333/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:07 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i336/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:07 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i345/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:08 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i348/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:08 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i355/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:09 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://ahsuzhou.esf.fang.com/house/h316-i32/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:09 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://ahsuzhou.esf.fang.com/house/h316-i34/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:09 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i342/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:10 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://ahsuzhou.esf.fang.com/house/h316-i35/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:10 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i324/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:10 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i325/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://tongling.esf.fang.com/house/h316-i33/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i334/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:11 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i353/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:12 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huangshan.esf.fang.com/house/h316-i33/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:12 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huangshan.esf.fang.com/house/h316-i34/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:12 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xuancheng.esf.fang.com/house/h316-i32/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:13 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huangshan.esf.fang.com/house/h316-i37/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:13 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://ahsuzhou.esf.fang.com/house/h316-i37/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:13 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i323/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:13 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i330/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:14 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i332/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:14 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huangshan.esf.fang.com/house/h316-i35/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:15 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i327/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:15 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i337/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:15 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i346/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:16 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i352/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:16 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huainan.esf.fang.com/house/h316-i310/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:17 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://ahsuzhou.esf.fang.com/house/h316-i36/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:17 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i322/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:17 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i329/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:18 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i340/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:18 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i343/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:19 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i347/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:19 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://ahsuzhou.esf.fang.com/house/h316-i33/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:19 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i356/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:20 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i339/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:20 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huangshan.esf.fang.com/house/h316-i310/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:20 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://qiqihaer.esf.fang.com/house/h316-i33/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:21 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://qiqihaer.esf.fang.com/house/h316-i36/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:21 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://qiqihaer.esf.fang.com/house/h316-i39/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:21 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huangshan.esf.fang.com/house/h316-i38/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:22 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huangshan.esf.fang.com/house/h316-i39/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:22 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huangshan.esf.fang.com/house/h316-i36/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:22 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://qiqihaer.esf.fang.com/house/h316-i311/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:23 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xuancheng.esf.fang.com/house/h316-i33/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:23 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://qiqihaer.esf.fang.com/house/h316-i34/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:23 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i350/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:23 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xuancheng.esf.fang.com/house/h316-i35/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:24 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-04 18:18:24 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i321/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:24 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i338/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:24 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i341/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:25 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i351/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:25 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://ahsuzhou.esf.fang.com/house/h316-i38/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:25 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://qiqihaer.esf.fang.com/house/h316-i312/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:26 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huangshan.esf.fang.com/house/h316-i311/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:27 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://huaibei.esf.fang.com/house/h316-i354/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:27 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://qiqihaer.esf.fang.com/house/h316-i32/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:27 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://qiqihaer.esf.fang.com/house/h316-i37/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:28 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://qiqihaer.esf.fang.com/house/h316-i35/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:28 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://qiqihaer.esf.fang.com/house/h316-i38/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:28 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://tongcheng.esf.fang.com/house/h316-i32/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:29 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xuancheng.esf.fang.com/house/h316-i34/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:29 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://qiqihaer.esf.fang.com/house/h316-i310/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:29 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i39/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:29 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i34/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:30 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i35/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:30 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i312/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:30 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i37/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:31 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i323/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:31 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i324/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:32 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i326/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:32 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i328/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:32 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i338/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:33 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i345/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:33 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2019-08-04 18:18:33 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2019-08-04 18:18:33 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i346/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:33 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i347/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:34 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i352/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:18:34 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 458,
+ 'downloader/exception_type_count/twisted.web._newclient.ResponseNeverReceived': 458,
+ 'downloader/request_bytes': 168333,
+ 'downloader/request_count': 461,
+ 'downloader/request_method_count/GET': 461,
+ 'downloader/response_bytes': 1171,
+ 'downloader/response_count': 3,
+ 'downloader/response_status_count/301': 1,
+ 'downloader/response_status_count/302': 2,
+ 'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2019, 8, 4, 10, 18, 34, 301519),
+ 'log_count/ERROR': 88,
+ 'log_count/INFO': 12,
+ 'retry/count': 370,
+ 'retry/max_reached': 88,
+ 'retry/reason_count/twisted.web._newclient.ResponseNeverReceived': 370,
+ 'scheduler/dequeued/redis': 461,
+ 'scheduler/enqueued/redis': 373,
+ 'start_time': datetime.datetime(2019, 8, 4, 10, 15, 24, 26720)}
+2019-08-04 18:18:34 [scrapy.core.engine] INFO: Spider closed (shutdown)
+2019-08-04 18:19:32 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: fang)
+2019-08-04 18:19:32 [scrapy.utils.log] INFO: Versions: lxml 3.7.2.0, libxml2 2.9.4, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.6.5 |Anaconda, Inc.| (default, Mar 29 2018, 13:32:41) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Windows-10-10.0.17763-SP0
+2019-08-04 18:19:32 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'fang', 'CONCURRENT_REQUESTS': 2, 'DOWNLOAD_DELAY': 0.25, 'DOWNLOAD_TIMEOUT': 10, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'EsfHouse20190804.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'fang.spiders', 'RETRY_TIMES': 3, 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_LOADER_WARN_ONLY': True, 'SPIDER_MODULES': ['fang.spiders']}
+2019-08-04 18:19:32 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-04 18:19:32 [fang] INFO: Reading start URLs from redis key 'fangtianxia:start_urls' (batch size: 2, encoding: utf-8
+2019-08-04 18:19:33 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'fang.middlewares.UserAgent',
+ 'fang.middlewares.ProxyMiddleware',
+ 'fang.middlewares.Captcha_Middleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-04 18:19:33 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-04 18:19:33 [scrapy.middleware] INFO: Enabled item pipelines:
+['fang.pipelines.MysqlTwistedPipline']
+2019-08-04 18:19:33 [scrapy.core.engine] INFO: Spider opened
+2019-08-04 18:19:33 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-04 18:19:34 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i360/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:19:35 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i363/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:19:35 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i368/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:19:35 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i372/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:19:36 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i382/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:19:36 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i390/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:19:37 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i392/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:19:37 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i395/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:19:38 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i317/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:19:38 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i325/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:19:39 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i330/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:19:39 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i331/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:19:39 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2019-08-04 18:19:39 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2019-08-04 18:19:39 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i332/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:19:39 [scrapy.core.scraper] ERROR: Error downloading <GET http://search.fang.com/captcha-verify/redirect?h=https://xishuangbanna.esf.fang.com/house/h316-i339/>
+Traceback (most recent call last):
+  File "d:\python3.6\anaconda3\lib\site-packages\scrapy\core\downloader\middleware.py", line 43, in process_request
+    defer.returnValue((yield download_func(request=request,spider=spider)))
+twisted.web._newclient.ResponseNeverReceived: [<twisted.python.failure.Failure OpenSSL.SSL.Error: [('SSL routines', 'SSL23_GET_SERVER_HELLO', 'unknown protocol')]>]
+2019-08-04 18:19:39 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 14,
+ 'downloader/exception_type_count/twisted.web._newclient.ResponseNeverReceived': 14,
+ 'downloader/request_bytes': 5776,
+ 'downloader/request_count': 14,
+ 'downloader/request_method_count/GET': 14,
+ 'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2019, 8, 4, 10, 19, 39, 930036),
+ 'log_count/ERROR': 14,
+ 'log_count/INFO': 9,
+ 'retry/max_reached': 14,
+ 'scheduler/dequeued/redis': 14,
+ 'start_time': datetime.datetime(2019, 8, 4, 10, 19, 33, 945432)}
+2019-08-04 18:19:39 [scrapy.core.engine] INFO: Spider closed (shutdown)
+2019-08-04 19:21:41 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: fang)
+2019-08-04 19:21:41 [scrapy.utils.log] INFO: Versions: lxml 3.7.2.0, libxml2 2.9.4, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.6.5 |Anaconda, Inc.| (default, Mar 29 2018, 13:32:41) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 18.0.0 (OpenSSL 1.0.2o  27 Mar 2018), cryptography 2.2.2, Platform Windows-10-10.0.17763-SP0
+2019-08-04 19:21:41 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'fang', 'CONCURRENT_REQUESTS': 2, 'DOWNLOAD_DELAY': 0.25, 'DOWNLOAD_TIMEOUT': 10, 'DUPEFILTER_CLASS': 'scrapy_redis.dupefilter.RFPDupeFilter', 'LOG_FILE': 'EsfHouse20190804.txt', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'fang.spiders', 'RETRY_TIMES': 3, 'SCHEDULER': 'scrapy_redis.scheduler.Scheduler', 'SPIDER_LOADER_WARN_ONLY': True, 'SPIDER_MODULES': ['fang.spiders']}
+2019-08-04 19:21:41 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2019-08-04 19:21:41 [fang] INFO: Reading start URLs from redis key 'fangtianxia:start_urls' (batch size: 2, encoding: utf-8
+2019-08-04 19:21:41 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'fang.middlewares.UserAgent',
+ 'fang.middlewares.ProxyMiddleware',
+ 'fang.middlewares.Captcha_Middleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-08-04 19:21:41 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-08-04 19:21:41 [scrapy.middleware] INFO: Enabled item pipelines:
+['fang.pipelines.MysqlTwistedPipline']
+2019-08-04 19:21:41 [scrapy.core.engine] INFO: Spider opened
+2019-08-04 19:21:42 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-04 19:22:42 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-08-04 19:23:06 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2019-08-04 19:23:06 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2019-08-04 19:23:42 [scrapy.extensions.logstats] INFO: Crawled 1 pages (at 1 pages/min), scraped 0 items (at 0 items/min)
+2019-08-04 19:24:37 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 20,
+ 'downloader/exception_type_count/twisted.internet.error.TimeoutError': 1,
+ 'downloader/exception_type_count/twisted.web._newclient.ResponseNeverReceived': 19,
+ 'downloader/request_bytes': 7943,
+ 'downloader/request_count': 22,
+ 'downloader/request_method_count/GET': 22,
+ 'downloader/response_bytes': 25226,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 1,
+ 'downloader/response_status_count/302': 1,
+ 'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2019, 8, 4, 11, 24, 37, 340494),
+ 'log_count/INFO': 11,
+ 'offsite/domains': 1,
+ 'offsite/filtered': 4,
+ 'request_depth_max': 1,
+ 'response_received_count': 1,
+ 'retry/count': 20,
+ 'retry/reason_count/twisted.internet.error.TimeoutError': 1,
+ 'retry/reason_count/twisted.web._newclient.ResponseNeverReceived': 19,
+ 'scheduler/dequeued/redis': 22,
+ 'scheduler/enqueued/redis': 660,
+ 'start_time': datetime.datetime(2019, 8, 4, 11, 21, 42, 134397)}
+2019-08-04 19:24:37 [scrapy.core.engine] INFO: Spider closed (shutdown)

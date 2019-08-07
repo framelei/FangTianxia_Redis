@@ -50,8 +50,15 @@ class FangtianxiaSpider(RedisSpider):
                     # 郑州二手房 按开盘时间第11页    'https://zz.esf.fang.com/house/h316-i311/'
                     esf_url = prefix + 'esf.fang.com/house/h316-i31/'
                 # meta里面可以携带一些参数信息放到Request里面，在callback函数里面通过response获取
-                # yield scrapy.Request(url=newhouse_url,callback=self.parse_newhouse,meta={'info':(province,city_name)})
-                yield scrapy.Request(url=esf_url,callback=self.parse_esf,meta={'info':(province,city_name)})
+                yield scrapy.Request(url=newhouse_url,callback=self.parse_newhouse,meta={'info':(province,city_name),'url':newhouse_url},errback=self.handle_err)
+                # yield scrapy.Request(url=esf_url,callback=self.parse_esf,meta={'info':(province,city_name)})
+
+    def handle_err(self,failure):
+        # 1、通过meta传参获取请求失败的url
+        url = failure.request.meta['url']
+        # 2、将失败的url重新加入调度队列，解析方法使用parse_newhouse
+        print('城市起始页 连续3次请求失败，重新放入调度队列，等待再次尝试：    ',url)
+        yield scrapy.Request(url=url,callback=self.parse_newhouse)
 
     def parse_newhouse(self,response):
         # 解析新房具体字段
@@ -121,8 +128,19 @@ class FangtianxiaSpider(RedisSpider):
                     if next_url:
                         yield scrapy.Request(url=next_url,
                                              callback=self.parse_newhouse,
-                                             meta={'info': (province, city_name)}
+                                             meta={'info': (province, city_name),
+                                                   'url':next_url
+                                                   },
+                                             errback=self.handle_newhouse_err
+
                                              )
+
+    def handle_newhouse_err(self,failure):
+        # 1、通过meta传参获取请求失败的url
+        url = failure.request.meta['url']
+        # 2、将失败的url重新加入调度队列，解析方法使用parse_newhouse
+        print('NewHouse 连续3次请求失败，重新放入调度队列，等待再次尝试：    ',url)
+        yield scrapy.Request(url=url,callback=self.parse_newhouse)
 
     def parse_esf(self, response):
         # 二手房
