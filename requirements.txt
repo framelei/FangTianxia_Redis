@@ -59,7 +59,7 @@ fake-useragent==0.1.11
 fastcache==1.0.2
 filelock==3.0.4
 Flask==0.12
-Flask-Cors==3.0.4
+Flask-Cors==3.0.9
 Flask-Login==0.4.1
 Flask-SQLAlchemy==2.3.2
 fonttools==3.40.0
